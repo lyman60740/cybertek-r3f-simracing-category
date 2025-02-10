@@ -214,7 +214,9 @@ function Frame({ url, position, rotation, isSelected, isHovered, onSelect, onDes
          position={[0.55, GOLDENRATIO, 0.2]} 
          fontSize={0.05} 
          color={isSelected ? "#FFCF00" : isHovered ? "#FFCF00" : "white"}
-         toneMapped={false}         
+         toneMapped={false}    
+         onPointerOver={(e) => e.stopPropagation()} // ❌ Stoppe le hover du texte
+  onPointerOut={(e) => e.stopPropagation()}       
          >
         {props.name}
       </Text>
