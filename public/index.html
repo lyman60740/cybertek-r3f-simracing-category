@@ -36,13 +36,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     document.addEventListener('DOMContentLoaded', ()=> {
+      const title = document.querySelector('h1')
       const catLine = document.querySelector('.cat-line')
       const catLineDivs =  gsap.utils.toArray('.cat-line div')
       const lis =  gsap.utils.toArray('.hero-banner ul li span')
       const lisDiv =  gsap.utils.toArray('.hero-banner ul li div')
 
+      gsap.set(title, {
+        y: -20
+      })
 
-      const tl = gsap.timeline({delay: 2})
+      const tl = gsap.timeline({delay: 1.5})
       tl.to(catLine, {
         scaleX: 1,
         ease: "power3.inOut",
@@ -52,7 +56,7 @@
         scaleY: 1,
         ease: "power3.inOut",
         duration: .5,
-      }, "<90%")
+      }, "<70%")
       .to(lisDiv, {
        scaleY: 1,
         ease: "power3.inOut",
@@ -65,6 +69,11 @@
         duration: 2,
         stagger:0.1
       }, "<10%")
+      .to(title, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.5,
+      }, "<")
 
     })
 
