@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  color: white;
+  user-select: none;
+  font-family: "Outfit", serif;
+}
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.hero-banner {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 150px;
+  gap: 50px;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 20px;
+  width: 90vw;
+  justify-content: center;
+  position: relative;
+}
+.hero-banner ul::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 1px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.hero-banner ul::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 1px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Style du carré */
+.hero-banner ul li::after {
+  content: "";
+  position: absolute;
+  right: -20px; /* Positionne le carré à droite */
+  top: 50%;
+  transform: translateY(-50%) scale(0); /* Caché par défaut */
+  width: 8px; /* Taille du carré */
+  height: 8px;
+  background-color: #FFCF00; /* Couleur jaune */ 
+  opacity: 0; /* Invisible au départ */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
+}
+
+/* Apparition avec effet */
+.hero-banner ul li.selected::after {
+  transform: translateY(-50%) scale(1); /* Apparition douce */
+  opacity: 1;
+}
+
+.hero-banner ul li::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Positionne le carré à droite */
+  left: 50%;
+  transform: translateX(-50%) ; /* Caché par défaut */
+  width: 1px; /* Taille du carré */
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5); /* Couleur jaune */ 
+}
+.hero-banner h1, .hero-banner ul {
+  z-index: 2;
+}
