@@ -37,14 +37,14 @@ export function Ground() {
         // normalScale={[0.15, 0.15]}
         roughnessMap={roughness}
         dithering={true}
-        color={[0.015, 0.015, 0.015]}
+        color={[0.005, 0.005, 0.005]}
         roughness={0.8}
         blur={[1000, 400]} // Blur ground reflections (width, heigt), 0 skips blur
         mixBlur={30} // How much blur mixes with surface roughness (default = 1)
-        mixStrength={10} // Strength of the reflections
+        mixStrength={30} // Strength of the reflections
         mixContrast={1} // Contrast of the reflections
         resolution={1024} // Off-buffer resolution, lower=faster, higher=better quality, slower
-        mirror={0} // Mirror environment, 0 = texture colors, 1 = pick up env colors
+        mirror={1} // Mirror environment, 0 = texture colors, 1 = pick up env colors
         depthScale={0.01} // Scale the depth factor (0 = no depth, default = 0)
         minDepthThreshold={0.9} // Lower edge for the depthTexture interpolation (default = 0)
         maxDepthThreshold={1} // Upper edge for the depthTexture interpolation (default = 0)

@@ -9,18 +9,18 @@ const angleOffset = Math.PI / 9; // Angle supplémentaire pour ajuster la courbu
 const images = [
 
   // Arrière légèrement tourné vers le centre
-  { position: [-radius * 0.3, 0, center[2] - 0.5], rotation: [0, 0, 0], url: '/images/common-ph.png', name: "CATEGORIE 1" },
-  { position: [radius * 0.3, 0, center[2] - 0.5], rotation: [0, 0, 0], url: '/images/common-ph.png', name: "CATEGORIE 2" },
+  { position: [-radius * 0.3, 0, center[2] - 0.5], rotation: [0, 0, 0], url: '/images/common-ph.png', name: "(1) CHASSIS" },
+  { position: [radius * 0.3, 0, center[2] - 0.5], rotation: [0, 0, 0], url: '/images/common-ph.png', name: "(2) PC GAMER" },
 
   // Côtés gauches
-  { position: [-radius * 0.9, 0, center[2] + 0.2], rotation: [0, Math.PI / 4, 0], url: '/images/common-ph.png', name: "CATEGORIE 3" },
-  { position: [-radius * 1.3, 0, center[2] + 0.8], rotation: [0, Math.PI / 3.5, 0], url: '/images/common-ph.png', name: "CATEGORIE 4" },
-  { position: [-radius * 1.6, 0, center[2] + 2.1], rotation: [0, Math.PI / 2.5, 0], url: '/images/common-ph.png', name: "CATEGORIE 5" },
+  { position: [-radius * 0.9, 0, center[2] + 0.2], rotation: [0, Math.PI / 4, 0], url: '/images/common-ph.png', name: "(3) PEDALIER" },
+  { position: [-radius * 1.3, 0, center[2] + 0.8], rotation: [0, Math.PI / 3.5, 0], url: '/images/common-ph.png', name: "(4) ECRANS" },
+  { position: [-radius * 1.6, 0, center[2] + 2.1], rotation: [0, Math.PI / 2.5, 0], url: '/images/common-ph.png', name: "(5) VOLANTS" },
 
   // Côtés droits
-  { position: [radius * 0.9, 0, center[2] + 0.2], rotation: [0, -Math.PI / 4, 0], url: '/images/common-ph.png', name: "CATEGORIE 6" },
-  { position: [radius * 1.3, 0, center[2] + 0.8], rotation: [0, -Math.PI / 3.5, 0], url: '/images/common-ph.png', name: "CATEGORIE 7" },
-  { position: [radius * 1.6, 0, center[2] + 2.1], rotation: [0, -Math.PI / 2.5, 0], url: '/images/common-ph.png', name: "CATEGORIE 8" }
+  { position: [radius * 0.9, 0, center[2] + 0.2], rotation: [0, -Math.PI / 4, 0], url: '/images/common-ph.png', name: "(6) BASE DE VOLANT" },
+  { position: [radius * 1.3, 0, center[2] + 0.8], rotation: [0, -Math.PI / 3.5, 0], url: '/images/common-ph.png', name: "(7) ACCESSOIRES GAMING" },
+  { position: [radius * 1.6, 0, center[2] + 2.1], rotation: [0, -Math.PI / 2.5, 0], url: '/images/common-ph.png', name: "(8) BUNDLE" }
 ];
 
 

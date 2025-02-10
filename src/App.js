@@ -16,7 +16,7 @@ function CameraRig() {
 
   // Position initiale (plus haut et plus loin)
   const initialPosition = [0, 10, 55];
-  const targetPosition = [0, 0, 10.5];
+  const targetPosition = [0, 0.5, 7.8];
 
   useEffect(() => {
     camera.position.set(...initialPosition);
@@ -83,14 +83,14 @@ useEffect(() => {
 
 
   return (
-    <Canvas dpr={[1, 1.5]} camera={{ fov: 40, position: [0, 0, 10.5] }}>
+    <Canvas dpr={[1, 1.5]} camera={{ fov: 70, position: [0, 0.5, 7.8] }}>
       <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 0, 20]} />
 
       <CameraRig />
 
       <ambientLight intensity={.5} />
-  <directionalLight position={[0, 10, 5]} intensity={.3} castShadow />
+  <directionalLight position={[-4, 5, 2]} intensity={.4} castShadow />
       <group position={[0, -0.5, 0]}>
       <Frames 
   images={images} 
@@ -117,7 +117,7 @@ useEffect(() => {
         <Ground />
       </group>
       {/* <Environment preset="city" /> */}
-      {/* <OrbitControls enableZoom={true} /> */}
+      <OrbitControls enableZoom={true} />
     </Canvas>
   )
 }

@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-bottom: 150px;
+  padding-bottom: 90px;
   gap: 50px;
 }
 h1 {
@@ -83,12 +83,14 @@ li {
   font-size: 24px;
   cursor: pointer;
   position: relative;
-  
+  display: flex;
 }
 li span {
   opacity: 0;
   transform: translateY(-20%);
   transition: transform opacity cubic-bezier(0.33, 0.7, 0.47, 0.84);
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /* Style du carré */
@@ -96,7 +98,7 @@ li span {
   content: "";
   position: absolute;
   right: -20px; /* Positionne le carré à droite */
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%) scale(0); /* Caché par défaut */
   width: 8px; /* Taille du carré */
   height: 8px;
