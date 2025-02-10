@@ -3,7 +3,9 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --scaleY: 0;
+}
 html,
 body,
 #root {
@@ -45,29 +47,35 @@ ul {
   list-style: none;
   display: flex;
   gap: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
   padding-top: 20px;
   width: 90vw;
   justify-content: center;
   position: relative;
 }
-.hero-banner ul::before {
-  content: "";
+.cat-line {
   position: absolute;
+  width: 100%;
   top: 0px;
-  left: 0;
-  width: 1px;
-  height: 15px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
+  
 }
-.hero-banner ul::after {
-  content: "";
+.cat-line div {
   position: absolute;
-  top: 0px;
-  right: 0;
+  top: 0.5px;
   width: 1px;
   height: 15px;
   background-color: rgba(255, 255, 255, 0.5);
+  transform:scaleY(0);
+  transform-origin: top;
+}
+.cat-line div:nth-child(1) {
+  left: 0;
+}
+.cat-line div:nth-child(2) {
+  right: 0;
 }
 li {
   margin: 0;
@@ -75,7 +83,12 @@ li {
   font-size: 24px;
   cursor: pointer;
   position: relative;
-  transition: all 0.2s ease;
+  
+}
+li span {
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: transform opacity cubic-bezier(0.33, 0.7, 0.47, 0.84);
 }
 
 /* Style du carré */
@@ -98,15 +111,17 @@ li {
   opacity: 1;
 }
 
-.hero-banner ul li::before {
-  content: "";
+
+
+.hero-banner ul li div {
   position: absolute;
-  top: -20px; /* Positionne le carré à droite */
+  top: -19px; /* Positionne le carré à droite */
   left: 50%;
-  transform: translateX(-50%) ; /* Caché par défaut */
+  transform: translateX(-50%) scaleY(0);
   width: 1px; /* Taille du carré */
   height: 8px;
-  background-color: rgba(255, 255, 255, 0.5); /* Couleur jaune */ 
+  background-color: rgba(255, 255, 255, 0.5); 
+  transform-origin: top;
 }
 .hero-banner h1, .hero-banner ul {
   z-index: 2;

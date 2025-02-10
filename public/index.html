@@ -18,17 +18,59 @@
     <div id="root"></div>
     <h1>Plongez au coeur de l'univers SimRacing</h1>
     <ul>
-      <li>Catégorie 1</li>
-      <li>Catégorie 2</li>
-      <li>Catégorie 3</li>
-      <li>Catégorie 4</li>
-      <li>Catégorie 5</li>
-      <li>Catégorie 6</li>
-      <li>Catégorie 7</li>
-      <li>Catégorie 8</li>
-
+      <div class="cat-line">
+        <div></div>
+        <div></div>
+      </div>
+      <li> <span>Catégorie 1</span> <div></div></li>
+      <li><span>Catégorie 2</span> <div></div></li>
+      <li><span>Catégorie 3</span> <div></div></li>
+      <li><span>Catégorie 4</span> <div></div></li>
+      <li><span>Catégorie 5</span> <div></div></li>
+      <li><span>Catégorie 6</span> <div></div></li>
+      <li><span>Catégorie 7</span><div></div></li>
+      <li><span>Catégorie 8</span><div></div></li>
     </ul>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const catLine = document.querySelector('.cat-line')
+      const catLineDivs =  gsap.utils.toArray('.cat-line div')
+      const lis =  gsap.utils.toArray('.hero-banner ul li span')
+      const lisDiv =  gsap.utils.toArray('.hero-banner ul li div')
+
+
+      const tl = gsap.timeline({delay: 2})
+      tl.to(catLine, {
+        scaleX: 1,
+        ease: "power3.inOut",
+        duration: 2.5,
+      })
+      .to(catLineDivs, {
+        scaleY: 1,
+        ease: "power3.inOut",
+        duration: .5,
+      }, "<90%")
+      .to(lisDiv, {
+       scaleY: 1,
+        ease: "power3.inOut",
+        duration: .5,
+        stagger:0.1
+      }, "<50%")
+      .to(lis, {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 2,
+        stagger:0.1
+      }, "<10%")
+
+    })
+
+
+  </script>
+
 </body>
 
 </html>
