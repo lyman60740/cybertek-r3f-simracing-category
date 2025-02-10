@@ -37,14 +37,28 @@ body {
   padding-bottom: 9vh;
   gap: 30px;
 }
+.overlay {
+  position: absolute;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0, 1) 0%, rgba(0,0,0, 0) 33%, rgba(0,0,0, 0) 66%,rgba(0,0,0, 1) 100%);
+}
 .hero-banner h1 {
   margin: 0;
   padding: 0;
   opacity: 0;
   transform: translateY(-20px);
   transition: transform opacity cubic-bezier(0.33, 0.7, 0.47, 0.84);
+  position: relative;
+  z-index: 3;
 }
 ul {
+  position: relative;
+  z-index: 3;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -53,7 +67,6 @@ ul {
   padding-top: 20px;
   width: 90vw;
   justify-content: center;
-  position: relative;
 }
 .cat-line {
   position: absolute;
