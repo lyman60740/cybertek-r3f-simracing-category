@@ -117,7 +117,7 @@ useEffect(() => {
         <Ground />
       </group>
       {/* <Environment preset="city" /> */}
-      <OrbitControls enableZoom={true} />
+      {/* <OrbitControls enableZoom={true} /> */}
     </Canvas>
   )
 }
@@ -215,8 +215,8 @@ function Frame({ url, position, rotation, isSelected, isHovered, onSelect, onDes
          fontSize={0.05} 
          color={isSelected ? "#FFCF00" : isHovered ? "#FFCF00" : "white"}
          toneMapped={false}    
-         onPointerOver={(e) => e.stopPropagation()} // ❌ Stoppe le hover du texte
-  onPointerOut={(e) => e.stopPropagation()}       
+         onPointerOver={(e) => e.stopPropagation()} 
+          onPointerOut={(e) => e.stopPropagation()}       
          >
         {props.name}
       </Text>
